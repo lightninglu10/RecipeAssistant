@@ -3,7 +3,7 @@ const path = require('path');
 var app = express()
 
 // The local port of the app
-const port = '5000';
+const port = process.env.PORT || '5000';
 
 app.use('/static', express.static(path.join(__dirname, 'static')));
 
